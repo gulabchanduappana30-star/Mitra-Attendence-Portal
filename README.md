@@ -10,21 +10,23 @@ A high-performance, responsive React & Vite web application designed for **Mitra
 ### 🛡️ Administrator Console
 | Role | Email / Username | Password | Privileges |
 | :--- | :--- | :--- | :--- |
-| **Master Admin** | `admin@mitra.club` | `mitra@1234` (or `admin`) | Full system control, student roster management, batch analytics, audit trails |
+| **Master Admin** | `admin@mitra.club` | `mitra@1234` | Full system control, student roster management, batch analytics, audit trails |
 
-### 🎓 Student Portal Accounts
-> Default Student Password for all pre-seeded accounts: **`mitra123`**
+### 🎓 Real Student Portal Accounts (Vishnu Institute Roster)
+> Default Password for all student accounts: **`mitra123`** (Students can log in using their **Gmail ID**, **USN / Roll Number**, or **Name**).
 
-| Student Name | Batch | Email / Login ID | USN / Student ID | Default Password |
-| :--- | :--- | :--- | :--- | :--- |
-| **Ananya Roy** | Vibe Coding (VC) | `vibe.student@mitra.club` | `MITRA-VC-101` | `mitra123` |
-| **Rohan Mehta** | Vibe Coding (VC) | `rohan.vc@mitra.club` | `MITRA-VC-102` | `mitra123` |
-| **Vikramaditya Rao** | Artificial Intelligence (AI) | `ai.student@mitra.club` | `MITRA-AI-201` | `mitra123` |
-| **Diya Sengupta** | Artificial Intelligence (AI) | `diya.ai@mitra.club` | `MITRA-AI-202` | `mitra123` |
-| **Kavya Malhotra** | Marketing (MKT) | `marketing.student@mitra.club` | `MITRA-MKT-301` | `mitra123` |
-| **Aditya Gupta** | Marketing (MKT) | `aditya.mkt@mitra.club` | `MITRA-MKT-302` | `mitra123` |
-| **Siddharth Iyer** | Industry Connect (IC) | `industry.student@mitra.club` | `MITRA-IC-401` | `mitra123` |
-| **Tanya Joshi** | Industry Connect (IC) | `tanya.ic@mitra.club` | `MITRA-IC-402` | `mitra123` |
+| Student Name | Roll No / USN | Gmail ID / Login Identifier | Branch | Batch Team | Default Password |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **A Lokesh** | `24PA1A4507` | `24pa1a4507@gmail.com` | AI&DS | Vibe Coding | `mitra123` |
+| **A Sai Kiran** | `24PA1A4511` | `24pa1a4511@gmail.com` | AI&DS | AI | `mitra123` |
+| **B Mythili** | `24PA1A4520` | `24pa1a4520@gmail.com` | AI&DS | Marketing | `mitra123` |
+| **D Abhishek** | `24PA1A4528` | `24pa1a4528@gmail.com` | AI&DS | Marketing | `mitra123` |
+| **G Jaswanth Vamsi** | `24PA1A4542` | `24pa1a4542@gmail.com` | AI&DS | Vibe Coding | `mitra123` |
+| **G Kavyakshita** | `24PA1A4543` | `24pa1a4543@gmail.com` | AI&DS | AI | `mitra123` |
+| **M Sahithi** | `24PA1A4581` | `24pa1a4581@gmail.com` | AI&DS | AI | `mitra123` |
+| **M Purna Teja** | `24PA1A4586` | `24pa1a4586@gmail.com` | AI&DS | Vibe Coding | `mitra123` |
+
+*(Contains 68 active student profiles total across AI&DS, CSE, ECE, and IT branches).*
 
 ---
 
@@ -34,7 +36,7 @@ A high-performance, responsive React & Vite web application designed for **Mitra
 - **Styling & Design System**: [Tailwind CSS 3](https://tailwindcss.com/) with Class-Based Dark Mode & Cyber Aesthetics
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Database & Cloud Layer**: [Firebase SDK v10](https://firebase.google.com/) *(Authentication & Firestore DB Integration)*
-- **Local Fallback Engine**: Embedded Mock Engine for zero-config local development without requiring external cloud connection
+- **Local Fallback Engine**: Embedded Mock Engine pre-seeded with the 68 real Mitra Club student roster
 - **Graphics**: Inline Adaptive SVG Vector Engine (Official Vishnu Institute MITRA Brand Logo)
 
 ---

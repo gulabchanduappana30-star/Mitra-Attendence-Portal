@@ -147,13 +147,13 @@ export const Login = () => {
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-amber-500 shrink-0" />
                   <span className="text-[11px] text-amber-800 dark:text-amber-300 font-medium">
-                    Demo Student: <strong className="font-mono">vibe.student@mitra.club</strong> / <strong className="font-mono">mitra123</strong>
+                    Demo Student: <strong className="font-mono">24pa1a4507@gmail.com</strong> / <strong className="font-mono">mitra123</strong>
                   </span>
                 </div>
                 <button
                   type="button"
                   onClick={() => {
-                    setIdentifier('vibe.student@mitra.club');
+                    setIdentifier('24pa1a4507@gmail.com');
                     setPassword('mitra123');
                   }}
                   className="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider bg-amber-500/10 hover:bg-amber-500/20 px-2 py-1 rounded-lg transition-colors"
