@@ -18,18 +18,14 @@ export const AuthProvider = ({ children }) => {
           const parsed = JSON.parse(savedUser);
           if (parsed && parsed.id) {
             setUser(parsed);
+            setLoading(false);
             return;
           }
         }
-
-        // Default to Admin persona for immediate showcase
-        const admin = await dataService.getUserById('usr_admin_1');
-        if (admin) {
-          setUser(admin);
-          localStorage.setItem('mitra_active_user', JSON.stringify(admin));
-        }
+        setUser(null);
       } catch (e) {
         console.error('Session initialization error:', e);
+        setUser(null);
       } finally {
         setLoading(false);
       }
