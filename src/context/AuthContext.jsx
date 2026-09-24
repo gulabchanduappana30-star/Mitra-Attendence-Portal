@@ -9,29 +9,11 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Restore session from localStorage on mount
+  // Always require fresh login when opening the app/link
   useEffect(() => {
-    const initAuth = async () => {
-      try {
-        const savedUser = localStorage.getItem('mitra_active_user');
-        if (savedUser) {
-          const parsed = JSON.parse(savedUser);
-          if (parsed && parsed.id) {
-            setUser(parsed);
-            setLoading(false);
-            return;
-          }
-        }
-        setUser(null);
-      } catch (e) {
-        console.error('Session initialization error:', e);
-        setUser(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    initAuth();
+    localStorage.removeItem('mitra_active_user');
+    setUser(null);
+    setLoading(false);
   }, []);
 
 
