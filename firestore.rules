@@ -1,0 +1,58 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && getUserData().role == 'admin';
+    }
+
+    function isStudent() {
+      return isAuthenticated() && getUserData().role == 'student';
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Users Collection
+    match /users/{userId} {
+      // Students can read their own profile; Admins can read/write all user profiles
+      allow read: if isAuthenticated() && (isOwner(userId) || isAdmin());
+      allow write: if isAdmin();
+    }
+
+    // Batches Collection
+    match /batches/{batchId} {
+      // Any authenticated user can read batch listings
+      allow read: if isAuthenticated();
+      // Only admins can create or modify batches
+      allow write: if isAdmin();
+    }
+
+    // Attendance Collection
+    match /attendance/{attendanceId} {
+      // Students can read attendance records belonging to their own studentId
+      allow read: if isAuthenticated() && (isAdmin() || resource.data.studentId == request.auth.uid);
+      // STRICT RULE: Only administrators can create, edit, or delete attendance records
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Audit Logs Collection
+    match /auditLogs/{logId} {
+      // Only administrators can read or write audit trail records
+      allow read, create: if isAdmin();
+      allow update, delete: if false; // Audit logs are immutable
+    }
+
+  }
+}

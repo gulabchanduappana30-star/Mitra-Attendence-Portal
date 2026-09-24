@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 135" width="100%" height="100%">
+  <g fill="#000000">
+    <!-- M -->
+    <path d="M 10 100 V 32 C 10 14, 25 0, 43 0 H 52 L 82.5 65 L 113 0 H 122 C 140 0, 155 14, 155 32 V 100 H 130 V 34 L 95 100 H 70 L 35 34 V 100 Z" />
+    <!-- I -->
+    <rect x="172" y="0" width="24" height="100" rx="2" />
+    <!-- T -->
+    <path d="M 212 0 H 312 V 23 H 274 V 100 H 250 V 23 H 212 Z" />
+    <!-- R -->
+    <path d="M 328 0 H 384 C 409 0, 426 14, 426 33 C 426 49, 412 59, 392 61 L 426 100 H 397 L 368 64 H 352 V 100 H 328 Z M 352 22 V 43 H 380 C 392 43, 400 38, 400 32.5 C 400 27, 392 22, 380 22 Z" />
+    <!-- A -->
+    <path d="M 442 100 L 485 0 H 514 L 557 100 H 531 L 522 78 H 477 L 468 100 Z M 486 57 H 513 L 499.5 24 Z" />
+  </g>
+  <text x="283" y="130" text-anchor="middle" fill="#000000" font-family="'Inter', 'Outfit', system-ui, sans-serif" font-size="15px" font-weight="700" letter-spacing="0.33em">VISHNU INSTITUTE OF TECHNOLOGY</text>
+</svg>

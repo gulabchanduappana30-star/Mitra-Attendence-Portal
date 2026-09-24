@@ -1,0 +1,7 @@
+{
+  "name": "mitra-attendance-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend configuration, Firestore rules, and data services for Mitra Attendance Portal",
+  "type": "module"
+}
